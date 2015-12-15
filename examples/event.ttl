@@ -1,0 +1,40 @@
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+# some relevant entities
+<http://example.org/eventTypes/fmtid> a skos:Concept ;
+  skos:inScheme <http://id.loc.gov/vocabulary/preservation/eventType> ;
+  skos:prefLabel "format identification" .
+
+<http://example.org/agents/user1> a premis:Agent ;
+  premis:hasAgentType <http://id.loc.gov/vocabulary/preservation/agentType/per> .
+
+<http://example.org/agents/Archivematica-1.0> a premis:Agent ;
+  premis:hasAgentType <http://id.loc.gov/vocabulary/preservation/agentType/sof> .
+
+# premis 2.2 RDF
+<http://example.org/events/7d7c2e99-109f-4b08-aaf6-a5b8a6c87d12> a premis:Event;
+  premis:hasIdentifier [
+    a premis:Identifier ;
+    premis:hasIdentifierValue "7d7c2e99-109f-4b08-aaf6-a5b8a6c87d12" ;
+    premis:hasIdentifierType "UUID"
+  ];
+  premis:hasEventType <http://example.org/eventTypes/fmtid> ;
+  premis:eventDateTime '2014-01-15T19:34:59' ;
+  premis:hasEventRelatedAgent <http://example.org/agents/user1>,
+      <http://example.org/agents/Archivematica-1.0> ;
+  premis:eventDetail 'program="Droid"; version="3.0"' ;
+  premis:hasEventOutcomeInformation [
+    a premis:EventOutcomeInformation ;
+    premis:hasEventOutcome "Positive" ;
+    premis:hasEventOutcomeDetail "fmt/45"
+  ] .
+
+# suggested flattening
+<http://example.org/events/7d7c2e99-109f-4b08-aaf6-a5b8a6c87d12> a premis:Event;
+  premis:hasEventType <http://example.org/eventTypes/fmtid> ;
+  premis:eventDateTime '2014-01-15T19:34:59' ;
+  premis:hasAgent <http://example.org/agents/user1>, <http://example.org/agents/Archivematica-1.0> ;
+  premis:eventDetail 'program="Droid"; version="3.0"' ;
+  premis:hasEventOutcome "Positive" ;
+  premis:hasEventOutcomeDetail "fmt/45" .
