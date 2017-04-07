@@ -84,4 +84,20 @@
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasUsedBy">
+    <rdfs:label>was used by</rdfs:label>
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAssociateFor">
+    <rdfs:label>was associate for</rdfs:label>
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
+  </owl:ObjectProperty>
+
 </rdf:RDF>
