@@ -593,7 +593,7 @@
   <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/endDate">
     <rdfs:label>end date</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsStatus"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
@@ -614,7 +614,7 @@
   <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasDeterminationDate">
     <rdfs:label>has determination date</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsStatus"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
@@ -725,7 +725,7 @@
   <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/startDate">
     <rdfs:label>start date</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsStatus"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
