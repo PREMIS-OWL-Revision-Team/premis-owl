@@ -340,8 +340,9 @@
 
   <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasBasis">
     <rdfs:label>has basis</rdfs:label>
-    <rdfs:comment>Links from a Rule to the RightsBasis instance that supports or documents it.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Rule"/>
+    <rdfs:comment>Links from a RightsStatus to the RightsBasis instance that supports or documents
+      it.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsStatus"/>
     <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsBasis"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
