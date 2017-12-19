@@ -1,0 +1,86 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/spec/> .
+@prefix premis: <http://id.loc.gov/vocabulary/preservation> .
+@prefix prov: <http://w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/TR/rdf-schema/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix crypHashFunc: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions> .
+@prefix evOutcome: <http://id.loc.gov/vocabulary/preservationevOutcome> .
+@prefix evRelAgRole: <http://id.loc.gov/vocabulary/preservation/eventRelatedAgentRole> .
+@prefix evType: <http://id.loc.gov/vocabulary/preservation/eventType> .
+@prefix presLevType:  <http://id.loc.gov/vocabulary/preservation/preservationLevelType> .
+@prefix presLevRole:  <http://id.loc.gov/vocabulary/preservation/preservationLevelRole> .
+@prefix relSubType:  <http://id.loc.gov/vocabulary/preservation/relationshipSubType> .
+
+<AnimalAntics> a premis:IntellectualEntity ;
+    dct:identifier "NRI0192" ;
+    dct:rights <https://creativecommons.org/publicdomain/mark/1.0/> ;
+    relSubType:isr <http://nri.library.ca/0192-1> ;
+    relSubType:isr <http://nri.library.ca/0192-2> .
+
+<http://nri.library.ca/0192-1> a premis:Representation ;
+    presLevRole:cap <policy1> ;
+    relSubType:inc <http://nri.library.ca/0912-0001.xml> ;
+    relSubType:inc <http://nri.library.ca/0912-0002.tif> ;
+    relSubType:inc <http://nri.library.ca/0912-0003.tif> .
+
+<policy1> a presLevType:lop ;
+    premis:hasNote "Full preservation" ;
+    premis:hasDocumentation <http://nri.library.ca/prespolicy001.html> .
+
+<http://nri.library.ca/0192-2> a premis:Representation ;
+    presLevRole:cap <policy1> ;
+    relSubType:inc <http://nri.library.ca/0912-0004.sgml> .
+
+<http://nri.library.ca/0912-0001.xml> a premis:File ;
+    dct:format <XMLFormat> ;
+    premis:hasFixity <0912-0001Fixity> ;
+    premis:hasSize "58465" ;
+    premis:hasCompositionLevel "0" ;
+    prov:wasUsedBy <0912-0001Event> .
+
+<XMLFormat> a dct:FileFormat ;
+    rdfs:label "Extensible Markup Language" ;
+    premis:hasVersion "1.0" ;
+    skos:exactMatch <http://www.nationalarchives.gov.uk/pronom/fmt/101> .
+
+<0912-0001Fixity> a crypHashFunc:sha256 ;
+    rdf:value "d2bed92b73c090bb30a0b..." ;
+    dce:creator "hashlib.sha256" .
+
+<0912-0001Event> a evType:ing ;
+    prov:startedAtTime "2017-11-14T13:23:30Z" ;
+    prov:endedAtTime "2017-11-14T13:26:11Z" ;
+    evRelAgRole:aut <NRI> ;
+    evRelAgRole:imp <JaneDoe> .
+
+<JaneDoe> a prov:Person ;
+    foaf:name "Doe, Jane" ;
+    premis:hasNote "Preservation specialist, Digital Initiatives Division" .
+
+<NRI> a prov:Organization ;
+    foaf:name "Not a Real Institution" .
+
+<http://nri.library.ca/0912-0002.tif> a premis:File ;
+    dct:format <TIFFFormat> ;
+    premis:hasFixity <0912-0002Fixity> ;
+    premis:hasSize "5748572" ;
+    premis:hasCompositionLevel "0" ;
+    prov:generatedAtTime "2017-11-10T14:23:30Z" ;
+    dct:creator <KodakCapturePro> ;
+    prov:wasUsedBy <0912-0002Event> .
+
+<TIFFFormat> a dct:FileFormat ;
+    rdfs:label "Tagged Image File Format" ;
+    premis:hasVersion "6.0" ;
+    skos:exactMatch <http://www.nationalarchives.gov.uk/pronom/fmt/353> .
+
+<0912-0002Fixity> a crypHashFunc:sha256 ;
+    rdf:value "h5bed92b34c090bb30a7c..." ;
+    dce:creator "hashlib.sha256" .
+
+<KodakCapturePro> a prov:softwareAgent ;
+    rdfs:label "Kodak Capture Pro" ;
+    premis:hasVersion "4.0" .
