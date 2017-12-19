@@ -1,0 +1,124 @@
+@prefix crypHashFunc: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions> . @prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ebucore: <https://www.ebu.ch/metadata/ontologies/ebucore#> .
+@prefix envFuncType: <http://id.loc.gov/vocabulary/preservation/environmentFunctionType> .
+@prefix evOutcome: <http://id.loc.gov/vocabulary/preservation/eventOutcome> .
+@prefix evRelAgRole:  <http://id.loc.gov/vocabulary/preservation/eventRelatedAgentRole> .
+@prefix evRelObjRole:  <http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole> .
+@prefix evtype: <http://id.loc.gov/vocabulary/preservation/environmentFunctionType> .
+@prefix envchar:  <http://id.loc.gov/vocabulary/preservation/environmentCharacteristic> .
+@prefix envpurpose: <http://id.loc.gov/vocabulary/preservation/environmentPurpose> .
+@prefix premis: <http://id.loc.gov/vocabulary/preservation/> .
+@prefix presLevRole:  <http://id.loc.gov/vocabulary/preservation/preservationLevelRole> .
+@prefix presLevType:  <http://id.loc.gov/vocabulary/preservation/preservationLevelType> .
+@prefix prov: <http://w3.org/ns/prov#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relSubtype:  <http://id.loc.gov/vocabulary/preservation/relationshipSubType> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix storMedium: <http://id.loc.gov/preservation/storageMedium> .
+
+
+<WalkerPapers> a premis:IntellectualEntity ;
+    relSubtype:hsp <SteinemInterview> .
+
+<SteinemInterview> a premis:IntellectualEntity ;
+    relSubtype:isr <umatic1>, <umaticAccess> ;
+    dct:rights <http://rightsstatements.org/vocab/InC/1.0/> ;
+    premis:hasRightsStatus [
+        a premis:RightsStatus ;
+        premis:startDate "1984" ;
+        premis:hasDeterminationDate "20080910" ] .
+
+<http://rightsstatements.org/vocab/InC/1.0/> a premis:Copyright ;
+    premis:hasNote "Emory University does not control copyright for this image. This image is made available for individual viewing and reference for educational purposes only, such as personal study, preparation for teaching, and research. Your reproduction, distribution, public display or other re-use of any content beyond a fair use as codified in section 107 of US Copyright Law or other applicable privilege is at your own risk. It is your sole responsibility to investigate the copyright status of an image and obtain permission when needed. We are always interested in learning more about our collections. If you have information regarding this photograph, please contact marbl@emory.edu." .
+
+<umatic1> a premis:File ;
+    relSubtype:rep <SteinemInterview> ;
+    dct:format <movformat> ;
+    premis:hasSize "6500000000" ;
+    premis:hasOriginalName "1061_tape1" ;
+    premis:storedAt [
+        a premis:StorageLocation ;
+        rdf:value "/emory/admin/files/24ikj.mov" ;
+        premis:hasMedium storMedium:har ] ;
+    prov:generatedAtTime "2017-08-22T16:48:07.487Z" ;
+    premis:hasFixity <file1md5Fixity> ;
+    premis:hasPolicy <policy1> ;
+    prov:wasGeneratedBy <event1> ;
+    prov:wasUsedBy <event2>, <event3>, <event4>, <event5>, <event6> .
+
+<umaticAccess> a premis:File ;
+    relSubtype:rep <SteinemInterview> ;
+    dct:format <m4aformat> ;
+    premis:hasSize "745000000" ;
+    prov:generatedAtTime "2017-08-25T08:50:56.487Z" ;
+    prov:wasGeneratedBy <event6> .
+
+<policy1> a presLevType:lop ;
+    premis:hasNote "Normalization, Migration" ;
+    premis:hasRole presLevRole:int .
+
+<movformat> a dct:FileFormat ;
+    rdfs:label "Quicktime" ;
+    skos:exactMatch <http://www.nationalarchives.go.uk/pronom/fmt/658> .
+
+<m4aformat> a dct:FileFormat ;
+    rdfs:label "Apple Lossless Audio Codec" ;
+    skos:exactMatch <http://www.nationalarchives.go.uk/pronom/fmt/596> .
+
+<file1md5Fixity> a crypHashFunc:md5 ;
+    rdf:value "258622b1688250cb619f3c9ccaefb7eb" ;
+    dct:creator <md5Hash> .
+    
+<finalcutpro> a prov:softwareAgent ;
+    rdfs:label "FinalCutPro" ;  
+    premis:hasVersion "7" ;
+    dct:creator <Apple_Computer> . 
+
+<event1> a evtype:cre ;
+    dct:date "2017-08-22T16:48:07.487Z" ;
+    premis:hasOutcome evOutcome:suc ;
+    premis:hasOutcomeNote ".mov successfully created." ;
+    evRelAgRole:imp <tbunn> ;
+    evRelAgRole:exe <finalcutpro> ;
+    evRelObjRole:out <umatic1> .
+
+<event2> a evtype:ing ;
+    prov:startedAtTime "2017-08-24T08:48:07.487Z" ;
+    prov:endedAtTime "2017-08-24T08:50:56.487Z" ;
+    premis:hasOutcome evOutcome:suc ;
+    premis:hasOutcomeNote "successfully ingested" ;
+    premis:hasOutcomeNote "assigned pid 24ikj" ;
+    evRelAgRole:imp <tbunn> ;
+    evRelAgRole:exe <Fedora> ;
+    evRelObjRole:out <umatic1> .
+
+<event3> a evtype:mes ;
+    prov:startedAtTime "2017-08-24T08:48:07.487Z" ;
+    prov:endedAtTime "2017-08-24T08:50:56.487Z" ;
+    premis:hasOutcome evOutcome:suc ;
+    prov:generated <file1md5Fixity> ;
+    evRelAgRole:imp <md5Hash> .
+
+<event4> a evtype:fix ;
+    prov:startedAtTime "2017-08-25T00:07:20.656946" ;
+    prov:endedAtTime "2017-08-25T08:50:56.487Z" ;
+    premis:hasOutcome evOutcome:suc ;
+    premis:eventDetail "program eulfedora validate-checksums; version=1.7.2" ;
+    premis:hasOutcomeNote "Datastreams checked: SourceTech (1), MODS (2), Rights (1), DigitalTech (2), DC (2), CompressedAudio (1), AUDIO (1), provenanceMetadata (1), RELS-EXT (1)" ;
+    evRelAgRole:imp <fedoraAdmin> .
+
+<event5> a evtype:poa ;
+    prov:generated <policy1> ;
+    dct:date "2017-08-31-T08:15:30-05:00" ;
+    evRelAgRole:imp <erussey> .
+
+<event6> a evtype:cre ; 
+    prov:startedAtTime "2017-08-25T00:07:20.656946" ;
+    prov:endedAtTime "2017-08-25T08:50:56.487Z" ;
+    premis:hasOutcome evOutcome:suc ;
+    premis:hasOutcomeNote ".mp4 successfully created" ;
+    evRelAgRole:exe <finalcutpro> ;
+    evRelObjRole:sou <umatic1> ;
+    evRelObjRole:out <umaticAccess> .
