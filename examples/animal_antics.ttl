@@ -38,8 +38,7 @@
     dct:format <XMLFormat> ;
     premis:hasFixity <0912-0001Fixity> ;
     premis:hasSize "58465" ;
-    premis:hasCompositionLevel "0" ;
-    prov:wasUsedBy <0912-0001Event> .
+    premis:hasCompositionLevel "0" .
 
 <XMLFormat> a dct:FileFormat ;
     rdfs:label "Extensible Markup Language" ;
@@ -54,7 +53,8 @@
     prov:startedAtTime "2017-11-14T13:23:30Z" ;
     prov:endedAtTime "2017-11-14T13:26:11Z" ;
     evRelAgRole:aut <NRI> ;
-    evRelAgRole:imp <JaneDoe> .
+    evRelAgRole:imp <JaneDoe> ;
+    prov:used <http://nri.library.ca/0912-0001.xml> .
 
 <JaneDoe> a prov:Person ;
     foaf:name "Doe, Jane" ;
