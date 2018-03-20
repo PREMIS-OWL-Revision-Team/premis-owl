@@ -56,7 +56,7 @@
     <rdfs:comment>Copyright law.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsBasis"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
-    <owl:disjointWith rdf:resource="http://www.loc.gov/premis/rdf/v3/InstututionalPolicy"/>
+    <owl:disjointWith rdf:resource="http://www.loc.gov/premis/rdf/v3/InstitutionalPolicy"/>
     <owl:disjointWith rdf:resource="http://www.loc.gov/premis/rdf/v3/License"/>
     <owl:disjointWith rdf:resource="http://www.loc.gov/premis/rdf/v3/Statute"/>
     <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/preservation/copyrightStatus"/>
@@ -168,7 +168,7 @@
     <rdfs:comment>A license agreement or other legal document that grants rights.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsBasis"/>
     <owl:disjointWith rdf:resource="http://www.loc.gov/premis/rdf/v3/Copyright"/>
-    <owl:disjointWith rdf:resource="http://www.loc.gov/premis/rdf/v3/InstututionalPolicy"/>
+    <owl:disjointWith rdf:resource="http://www.loc.gov/premis/rdf/v3/InstitutionalPolicy"/>
     <owl:disjointWith rdf:resource="http://www.loc.gov/premis/rdf/v3/Statute"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:Class>
@@ -333,8 +333,8 @@
 
   <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/governs">
     <rdfs:label>governs</rdfs:label>
-    <owl:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsStatus"/>
-    <owl:range rdf:resource="http://www.loc.gov/premis/rdf/v3/Object"/>
+    <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsStatus"/>
+    <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/Object"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty> 
 
@@ -484,7 +484,7 @@
 
   <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/inhibits">
     <rdfs:label>inhibits</rdfs:label>
-    <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/Inhibitor"/>
+    <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Inhibitor"/>
     <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/Functionality"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
