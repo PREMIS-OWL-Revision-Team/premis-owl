@@ -52,8 +52,8 @@
     dce:creator "hashlib.sha256" .
 
 <0912-0001Event> a evType:ing ;
-    prov:startedAtTime "2017-11-14T13:23:30Z"^^xsd:dateTime ;
-    prov:endedAtTime "2017-11-14T13:26:11Z"^^xsd:dateTime ;
+    prov:startedAtTime "2017-11-14T13:23:30Z" ;
+    prov:endedAtTime "2017-11-14T13:26:11Z" ;
     evRelAgRole:aut <NRI> ;
     evRelAgRole:imp <JaneDoe> .
 
@@ -69,7 +69,7 @@
     premis:hasFixity <0912-0002Fixity> ;
     premis:hasSize 5748572 ;
     premis:hasCompositionLevel 0 ;
-    prov:generatedAtTime "2017-11-10T14:23:30Z"^^xsd:dateTime ;
+    prov:generatedAtTime "2017-11-10T14:23:30Z" ;
     dct:creator <KodakCapturePro> ;
     prov:wasUsedBy <0912-0002Event> .
 
