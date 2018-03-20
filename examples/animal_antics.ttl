@@ -13,6 +13,7 @@
 @prefix presLevType:  <http://id.loc.gov/vocabulary/preservation/preservationLevelType> .
 @prefix presLevRole:  <http://id.loc.gov/vocabulary/preservation/preservationLevelRole> .
 @prefix relSubType:  <http://id.loc.gov/vocabulary/preservation/relationshipSubType> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <AnimalAntics> a premis:IntellectualEntity ;
     dct:identifier "NRI0192" ;
@@ -37,8 +38,8 @@
 <http://nri.library.ca/0912-0001.xml> a premis:File ;
     dct:format <XMLFormat> ;
     premis:hasFixity <0912-0001Fixity> ;
-    premis:hasSize "58465" ;
-    premis:hasCompositionLevel "0" ;
+    premis:hasSize 58465 ;
+    premis:hasCompositionLevel 0 ;
     prov:wasUsedBy <0912-0001Event> .
 
 <XMLFormat> a dct:FileFormat ;
@@ -51,8 +52,8 @@
     dce:creator "hashlib.sha256" .
 
 <0912-0001Event> a evType:ing ;
-    prov:startedAtTime "2017-11-14T13:23:30Z" ;
-    prov:endedAtTime "2017-11-14T13:26:11Z" ;
+    prov:startedAtTime "2017-11-14T13:23:30Z"^^xsd:dateTime ;
+    prov:endedAtTime "2017-11-14T13:26:11Z"^^xsd:dateTime ;
     evRelAgRole:aut <NRI> ;
     evRelAgRole:imp <JaneDoe> .
 
@@ -66,9 +67,9 @@
 <http://nri.library.ca/0912-0002.tif> a premis:File ;
     dct:format <TIFFFormat> ;
     premis:hasFixity <0912-0002Fixity> ;
-    premis:hasSize "5748572" ;
-    premis:hasCompositionLevel "0" ;
-    prov:generatedAtTime "2017-11-10T14:23:30Z" ;
+    premis:hasSize 5748572 ;
+    premis:hasCompositionLevel 0 ;
+    prov:generatedAtTime "2017-11-10T14:23:30Z"^^xsd:dateTime ;
     dct:creator <KodakCapturePro> ;
     prov:wasUsedBy <0912-0002Event> .
 
