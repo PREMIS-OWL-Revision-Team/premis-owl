@@ -36,7 +36,7 @@
 <umatic1> a premis:File ;
     relSubtype:rep <SteinemInterview> ;
     dct:format <movformat> ;
-    premis:hasSize "6500000000" ;
+    premis:hasSize 6500000000 ;
     premis:hasOriginalName "1061_tape1" ;
     premis:storedAt [
         a premis:StorageLocation ;
@@ -51,7 +51,7 @@
 <umaticAccess> a premis:File ;
     relSubtype:rep <SteinemInterview> ;
     dct:format <m4aformat> ;
-    premis:hasSize "745000000" ;
+    premis:hasSize 745000000 ;
     prov:generatedAtTime "2017-08-25T08:50:56.487Z" ;
     prov:wasGeneratedBy <event6> .
 
