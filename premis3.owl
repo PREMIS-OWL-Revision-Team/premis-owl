@@ -308,7 +308,7 @@
 
   <owl:Class rdf:about="http://www.loc.gov/premis/rdf/v3/StorageMedium">
     <rdfs:label xml:lang="en">Storage medium</rdfs:label>
-    <rdfs:comment xml:lang="en">The type of the physical medium on which the Object is stored (e.g., magnetic tape, hard disk, CD-ROM,
+    <rdfs:comment xml:lang="en">The physical medium on which the Object is stored (e.g., magnetic tape, hard disk, CD-ROM,
       DVD).</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
     <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/preservation/storageMedium"/>
