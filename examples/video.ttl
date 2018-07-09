@@ -105,7 +105,7 @@
     prov:startedAtTime "2017-08-25T00:07:20.656946" ;
     prov:endedAtTime "2017-08-25T08:50:56.487Z" ;
     premis:hasOutcome evOutcome:suc ;
-    premis:eventDetail "program eulfedora validate-checksums; version=1.7.2" ;
+    premis:hasNote "program eulfedora validate-checksums; version=1.7.2" ;
     premis:hasOutcomeNote "Datastreams checked: SourceTech (1), MODS (2), Rights (1), DigitalTech (2), DC (2), CompressedAudio (1), AUDIO (1), provenanceMetadata (1), RELS-EXT (1)" ;
     evRelAgRole:imp <fedoraAdmin> .
 
