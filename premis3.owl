@@ -79,7 +79,7 @@
 
   <owl:Class rdf:about="http://www.loc.gov/premis/rdf/v3/Event">
     <rdfs:label xml:lang="en">Event</rdfs:label>
-    <rdfs:comment xml:lang="en">Preservation action that involves at least one digital object and/or Agent.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Events record activities that affect the long term preservation of digital objects.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
     <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/preservation/eventType"/>
