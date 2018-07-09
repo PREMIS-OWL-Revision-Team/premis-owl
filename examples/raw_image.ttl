@@ -20,8 +20,8 @@
 <http://nri.library.ca/5143-026.nrw> a premis:File ;
     dct:format <NikonRaw> ;
     premis:hasFixity <5143-026Fixity> ;
-    premis:hasSize "5857465" ;
-    premis:hasCompositionLevel "0" ;
+    premis:hasSize 5857465 ;
+    premis:hasCompositionLevel 0 ;
     presLevRole:int <policy1> ;
     premis:hasRightsStatus <rightsStatus1> ;
     dct:rights <rightsBasis1> ;
@@ -85,8 +85,8 @@
 <http://nri.library.ca/5143-026-1.dng> a premis:File ;
     dct:format <DNG> ;
     premis:hasFixity <5143-026-1Fixity> ;
-    premis:hasSize "40257462" ;
-    premis:hasCompositionLevel "0" ;
+    premis:hasSize 40257462 ;
+    premis:hasCompositionLevel 0 ;
     presLevRole:cap <policy1> ;
     premis:hasRightsStatus <rightsStatus1> ;
     dct:rights <rightsBasis1> ;
