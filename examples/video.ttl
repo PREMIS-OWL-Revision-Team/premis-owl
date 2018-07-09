@@ -99,7 +99,7 @@
     prov:endedAtTime "2017-08-24T08:50:56.487Z" ;
     premis:hasOutcome evOutcome:suc ;
     prov:generated <file1md5Fixity> ;
-    evRelAgRole:imp <md5Hash> .
+    evRelAgRole:exe <md5Hash> .
 
 <event4> a evtype:fix ;
     prov:startedAtTime "2017-08-25T00:07:20.656946" ;
