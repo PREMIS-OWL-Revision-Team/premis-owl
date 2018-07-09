@@ -403,7 +403,6 @@
 
   <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasMedium">
     <rdfs:label xml:lang="en">has medium</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/medium"/>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/StorageLocation"/>
     <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/StorageMedium"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
