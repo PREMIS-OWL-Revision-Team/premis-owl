@@ -620,6 +620,7 @@
     </rdfs:domain>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
+    <skos:narrowMatch rdf:resource="http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#fileSize">
   </owl:DatatypeProperty>
 
   <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasTerms">
