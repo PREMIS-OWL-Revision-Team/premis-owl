@@ -1,0 +1,280 @@
+@prefix func: <http://id.loc.gov/vocabulary/preservation/actionsGranted> .
+@prefix crypHashFunc: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions> . @prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ebucore: <https://www.ebu.ch/metadata/ontologies/ebucore#> .
+@prefix envFuncType: <http://id.loc.gov/vocabulary/preservation/environmentFunctionType> .
+@prefix evOutcome: <http://id.loc.gov/vocabulary/preservation/eventOutcome> .
+@prefix evRelAgRole:  <http://id.loc.gov/vocabulary/preservation/eventRelatedAgentRole> .
+@prefix evRelObjRole:  <http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole> .
+@prefix evType: <http://id.loc.gov/vocabulary/preservation/environmentFunctionType> .
+@prefix envchar:  <http://id.loc.gov/vocabulary/preservation/environmentCharacteristic> .
+@prefix envpurpose: <http://id.loc.gov/vocabulary/preservation/environmentPurpose> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2>.
+@prefix premis: <http://id.loc.gov/vocabulary/preservation/> .
+@prefix presLevRole:  <http://id.loc.gov/vocabulary/preservation/preservationLevelRole> .
+@prefix presLevType:  <http://id.loc.gov/vocabulary/preservation/preservationLevelType> .
+@prefix prov: <http://w3.org/ns/prov#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relSubType:  <http://id.loc.gov/vocabulary/preservation/relationshipSubType> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+#Rushdie papers
+<RushdiePapers> a premis:IntellectualEntity ;
+  relSubType:isr <G3HD>, <diskImageDD>, <diskImageE01> .
+
+#Powerbook G3 environment
+<powerbookG3env> a premis:IntellectualEntity ;
+  rdfs:label "powerbook G3 environment" ;
+  relSubType:isr <rushdieOriginal> ;
+  relSubType:hsp <macos75>, <clarisworks>, <powerbookG3HW> .
+
+<macos75> a envFuncType:ops ;
+  rdfs:label "Mac OS 7.5" ;
+  premis:hasVersion "7.5" ;
+  dct:creator <Apple_Computer> ;
+  relSubType:idp <powerbookG3> .
+
+<clarisworks40> a envFuncType:soa ;
+  rdfs:label "ClarisWorks 4.0" ;
+  premis:hasVersion "4.0" ;
+  dct:creator <Apple_Computer> ;
+  skos:closeMatch <http://wikidata.org/wiki/Q3679131> ;
+  relSubType:idp <macos> .
+
+<powerbookG3> a envFuncType:har ;
+  rdfs:label "Powerbook G3" ;
+  dce:creator <Apple_Computer> .
+
+#Representation of the original Rushdie environment (his personal Powerbook G3
+<rushdieOriginal> a premis:Representation ;
+  relSubType:rep <powerbookG3env> ;
+  premis:hasNote "Rushdie's original powerbook G3 computer with Mac OS 7.5 and Claris Works 4.0 installed on it was not preserved" ;
+  prov:wasUsedBy <deletionEvent> .
+
+#Deletion Event of the Rushdie Powerbook G3 representation"
+<deletionEvent> a evType:del ;
+  prov:endedAtTime "2017-04-06" .
+
+#Emulated environment
+<rushdieEmulation> a premis:intellectualEntity ;
+  rdfs:label "emulation" ;
+  relSubType:hsp <sheepshaver>, <macosx>, <macbook2008> ;
+  relSubType:isr <rushdieEmulationexe> .
+
+<rushdieEmulationexe> a premis:File ;
+  premis:hasCompositionLevel 0 ;
+  dct:format <e01format> ;
+  premis:hasSize 2987000000 ;
+  dce:creator <ewfacquire> ;
+  prov:generatedAtTime "2017-04-06T17:57:48.265Z" ;
+  premis:hasFixity <rushdieEmulationFixity> ;
+  relSubType:rep <rushdieEmulation> .
+
+<sheepsaver23> a envFuncType:soa ;
+  rdfs:label "SheepShaver 2.3" ;
+  premis:hasVersion "2.3" ;
+  premis:hasDocumentation <https://github.com/cebix/macemu> ;
+  dce:rights <rightsBasis3> ;
+  relSubType:req <macosx> .
+
+<rightsBasis3> a premis:License ;
+  premis:hasDocumentation <http://sheepshaver.cebix.net/COPYING> .
+
+<macosx> a envFuncType:ops ;
+  rdfs:label "Mac OS X" ;
+  premis:hasVersion "10.1" ;
+  dce:creator <Apple_Computer> ;
+  relSubType:idp <macbook2008> .
+
+<macbook2008> a envFuncType:har ;
+  rdfs:label "MacBook2008" ;
+  dce:creator <Apple_Computer> . 
+
+#Physical drive
+<G3HD> a premis:Representation ;
+  relSubType:idp <rushdieOriginal> ;
+  relSubType:iso <diskImageDD> ;
+  prov:wasUsedBy <event1> .
+
+#DD Disk Image
+<diskImageDD> a premis:file ;
+  premis:hasCompositionLevel 0 ;
+  dct:format <ddformat> ;
+  premis:hasSize 6100000000 ;
+  premis:hasOriginalName "1000_PowerbookG3-2" ;
+  dce:creator <gnuddrescue119> ;
+  prov:generatedAtTime "2017-04-06T17:57:48.265Z" ;
+  prov:wasGeneratedBy <event1> ;
+  prov:wasUsedBy <event2> ;
+  premis:hasFixity <diskImageE01Fixity> ;
+  relSubType:iso <diskImageE01> ;
+  relSubType:hss <G3HD> ;
+  premis:hasFixity <diskImagefixity> ;
+  dce:rights <rightsBasis1> ; 
+  premis:hasRightsStatus [
+    a premis:RightsStatus ;
+    premis:startDate "2008-01-01" ;
+    premis:endDate "OPEN" ;
+    premis:hasDeterminationDate "2017-04-06" ;
+    premis:hasBasis <rightsBasis1> ] .
+    
+<diskImageDDFixity> a crypHashFunc:md5 ;
+  rdf:value "35d3f6a6146cfbcea710f997cbec8674ce8f3789" ;
+  dce:creator <gnuddrescue119> .
+
+#E01 Disk Image
+<diskImageE01> a premis:Representation ;
+  premis:hasCompositionLevel 0 ;
+  dct:format <e01format> ;
+  premis:hasSize 6100000000 ;
+  premis:hasOriginalName "1000_PowerbookG3-2" ;
+  dce:creator <ewfacquire> ;
+  prov:wasGeneratedBy <event2> ;
+  prov:wasUsedBy <event3>, <event4> ;
+  premis:hasFixity <diskImageE01Fixity> ;
+  relSubType:iso <stickynote> ;
+  relSubType:hss <diskImageDD> ;
+  relSubType:iem <rushdieEmulation> ;
+  dce:rights <rightsBasis1> ;
+  premis:hasRightsStatus [
+    a premis:RightsStatus ;
+    premis:startDate "2008-01-01" ;
+    premis:endDate "OPEN" ;
+    premis:hasDeterminationDate "2017-04-06" ;
+    premis:hasBasis <rightsBasis1> ] .
+
+<rightsBasis1> a premis:InstitutionalPolicy ;
+  premis:hasNote "Original disk images are restricted." ;
+  prov:wasInfluencedBy <euladmin> , <srushdie> ; 
+  premis:prohibits <rule1> .
+    
+<rule1> a premis:Rule ;
+  premis:act func:dis ;
+  premis:startDate "2017-04-06" ;
+  premis:endDate "OPEN" .
+
+<diskImageE01Fixity> a crypHashFunc:SHA1 ;
+  rdf:value "35d3f6a6146cfbcea710f997cbec7674ce8f3789" ;
+  dct:creator <ewfacquire> .
+
+<e01format> a dct:FileFormat ;
+  rdfs:label "Encase Image File Format/Expert Witness Compression Format" ;
+  skos:exactMatch <http://www.nationalarchives.gov.uk/pronom/fmt/803> .
+ 
+#Stickynote: a file contained on the Rushdie Hard Drive
+<stickynote> a premis:File ;
+  premis:hasCompositionLevel 0 ;
+  dct:format <text> ;
+  premis:hasSize 371 ;
+  premis:hasOriginalName "Frontier The First Recording.txt" ;
+  dct:creator <FTKImager> ;
+  prov:wasGeneratedBy <eventAA> ;
+  prov:wasUsedBy <eventAB>, <eventAC> ;
+  premis:hasFixity <stickynotefixity> ;
+  relSubType:hss <diskImageE01> ;
+  relSubType:iem <rushdieEmulation> ;
+  premis:hasFixity <diskImagefixity> ;
+  dct:rights <rightsBasis2> ;
+  premis:hasRightsStatus [
+    a premis:RightsStatus ;
+    premis:startDate "2008-01-01" ;
+    premis:endDate "OPEN" ;
+    premis:hasDeterminationDate "2017-04-06" ;
+    premis:hasBasis <rightsBasis2> ] .
+
+<rightsBasis2> a premis:License ;
+  premis:hasDocumentation <deedOfGift> ;
+  premis:hasTerms "Selected electronic files can be viewed but not downloaded." ;
+  prov:wasInfluencedBy <srushdie> ;
+  premis:allows <rule2> .
+
+<rule2> a premis:Rule ;
+  premis:act func:ren ;
+  premis:act func:mig ;
+  premis:act func:rep ;
+  premis:startDate "2017-06-06" ;
+  premis:endDate "OPEN" .
+    
+<stickynotefixity> a crypHashFunc:MD5 ;
+  rdf:value "cbdbf45becb5c35m747d92603738fbc9" ;
+  dce:creator <Fedora> .
+
+<text> a dct:FileFormat ;
+  rdfs:label "Plain Text File" ;
+  skos:exactMatch <http://www.nationalarchives.gov.uk/pronom/fmt/163> .
+
+#Event data
+<event1> a evType:cre ;
+  prov:endedAtTime "2017-07-22T11:48:07.487Z" ;
+  premis:hasOutcome evOutcome:suc ;
+  evRelAgRole:imp <vendor> ;
+  evRelAgRole:exe <GNUddrescue> ;
+  evRelObjRole:sou <G3HD> ;
+  evRelObjRole:out <diskImageDD> .
+
+<GNUddrescue> a prov:softwareAgent ;
+  rdfs:label "GNU ddrescue" ;
+  premis:hasVersion "1.19" ;
+  premis:hasDocumentation <https://www.gnu.org/software/ddrescue/> .
+
+<event2> a evType:mig ;
+  prov:endedAtTime "2017-08-22T16:48:07.487Z" ;
+  premis:hasOutcome evOutcome:suc ;
+  evRelAgRole:imp <dwaugh> ;
+  evRelAgRole:exe <ewfacquire> ;
+  evRelObjRole:sou <diskImageDD> ;
+  evRelObjRole:out <diskImageE01> .
+
+<ewfacquire> a prov:softwareAgent ;
+  rdfs:label "Ewfacquire" . 
+
+<event3> a evType:ing ;
+  prov:startedAtTime "2017-08-24T08:48:07.487Z" ;
+  prov:endedAtTime "2017-08-24T08:50:56.487Z" ;
+  premis:hasOutcome evOutcome:suc ;
+  premis:hasOutcomeNote "successfully ingested" ;
+  premis:hasOutcomeNote "assigned pid 24ipj" ;
+  evRelAgRole:imp <dwaugh> ;
+  evRelAgRole:exe <Fedora> ;
+  evRelObjRole:sou <diskImageE01> .
+
+<event4> a evType:mes ;
+  prov:startedAtTime "2017-08-24T08:48:07.487Z" ;
+  prov:endedAtTime "2017-08-24T08:50:56.487Z" ;
+  premis:hasOutcome evOutcome:suc ;
+  premis:hasOutcomeDetail "md5:258622b1688250cb619f3c9ccaefb7eb" ;
+  evRelAgRole:exe <md5Hash> ;
+  evRelObjRole:sou <diskImageE01> .
+
+<event5> a evType:fix ;
+  prov:startedAtTime "2017-08-23T00:07:20.656946" ;
+  prov:endedAtTime "2017-08-23T08:50:56.487Z" ;
+  premis:hasOutcome evOutcome:suc ;
+  premis:hasOutcomeNote "program=eulfedora validate-checksums; version=1.7.2" ;
+  premis:hasOutcomeDetail "Datastreams checked: SourceTech (1), MODS (2), Rights (1), DigitalTech (2), DC (2), CompressedAudio (1), AUDIO (1), provenanceMetadata (1), RELS-EXT (1)" ;
+  evRelAgRole:imp <fedoraAdmin> .
+
+<eventAA> a evType:cre ;
+  dct:date "2017-08-22T16:48:07.487Z" ;
+  premis:hasOutcome evOutcome:suc ;
+  evRelAgRole:exe <FTKImager> ;
+  evRelObjRole:sou <diskImageE01> ;
+  evRelObjRole:out <stickynote> .
+
+<eventAB> a evType:ing ;
+  prov:startedAtTime "2017-08-24T08:48:07.487Z" ;
+  prov:endedAtTime "2017-08-24T08:50:56.487Z" ;
+  premis:hasOutcome evOutcome:suc ;
+  premis:hasOutcomeDetail "successfully ingested; assigned pid 97loi" ;
+  evRelAgRole:imp <dwaugh> ;
+  evRelAgRole:exe <Fedora> ;
+  evRelObjRole:out <stickynote> .
+
+<eventAC> a evType:mes ;
+  prov:startedAtTime "2017-08-24T08:48:07.487Z" ;
+  prov:endedAtTime "2017-08-24T08:50:56.487Z" ;
+  premis:hasOutcome evOutcome:suc ;
+  evRelAgRole:imp <md5Hash> ;
+  prov:generated <stickynotefixity> ;
+  evRelObjRole:sou <stickynote> .
