@@ -28,6 +28,7 @@
 
   <owl:Class rdf:about="http://www.loc.gov/premis/rdf/v3/Action">
     <rdfs:label xml:lang="en">Action</rdfs:label>
+    <rdfs:comment xml:lang="en">Operation type to perform on an Object. Effectively performing this action may produce an Event.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
     <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/preservation/actionsGranted"/>
   </owl:Class>
@@ -80,7 +81,7 @@
 
   <owl:Class rdf:about="http://www.loc.gov/premis/rdf/v3/Event">
     <rdfs:label xml:lang="en">Event</rdfs:label>
-    <rdfs:comment xml:lang="en">Events record activities that affect the long term preservation of digital objects.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Action performed within or outside the repository that affects its capability to preserve Objects over the long term.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
     <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/preservation/eventType"/>
@@ -102,14 +103,6 @@
       unauthorized way.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
     <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions"/>
-  </owl:Class>
-
-  <owl:Class rdf:about="http://www.loc.gov/premis/rdf/v3/Functionality">
-    <rdfs:label xml:lang="en">Functionality</rdfs:label>
-    <rdfs:comment xml:lang="en">A computer software or hardware capability for handling an Object.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
-    <!-- not yet published -->
-    <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/preservation/functionality"/>
   </owl:Class>
 
   <owl:Class rdf:about="http://www.loc.gov/premis/rdf/v3/HardwareAgent">
@@ -339,7 +332,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty> 
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasBasis">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/basis">
     <rdfs:label xml:lang="en">has basis</rdfs:label>
     <rdfs:comment xml:lang="en">Links from a RightsStatus to the RightsBasis instance that supports or documents
       it.</rdfs:comment>
@@ -348,34 +341,34 @@
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasCharacteristic">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/characteristic">
     <rdfs:label xml:lang="en">has characteristic</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Dependency"/>
     <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/EnvironmentCharacteristic"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasDependency">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/dependency">
     <rdfs:label xml:lang="en">has dependency</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Object"/>
     <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/Dependency"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasDocumentation">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/documentation">
     <rdfs:label xml:lang="en">has documentation</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasEncoding">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/encoding">
     <rdfs:label xml:lang="en">has encoding</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Signature"/>
     <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/SignatureEncoding"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasFixity">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/fixity">
     <rdfs:label xml:lang="en">has fixity</rdfs:label>
     <rdfs:domain>
       <owl:Class>
@@ -389,34 +382,34 @@
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasIdentifier">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/identifier">
     <rdfs:label xml:lang="en">has identifier</rdfs:label>
     <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/Identifier"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasJurisdiction">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/jurisdiction">
     <rdfs:label xml:lang="en">has jurisdiction</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsBasis"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasMedium">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/medium">
     <rdfs:label xml:lang="en">has medium</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/StorageLocation"/>
     <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/StorageMedium"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasOutcome">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/outcome">
     <rdfs:label xml:lang="en">has outcome</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Event"/>
     <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/OutcomeStatus"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasPolicy">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/policy">
     <rdfs:label xml:lang="en">has policy</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Object"/>
     <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/PreservationPolicy"/>
@@ -424,14 +417,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasPurpose">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/purpose">
     <rdfs:label xml:lang="en">has purpose</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Dependency"/>
-    <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/Functionality"/>
+    <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/Action"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasRelationship">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/relationship">
     <rdfs:label xml:lang="en">has relationship</rdfs:label>
     <rdfs:domain>
       <owl:Class>
@@ -446,7 +439,7 @@
     <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/preservation/relationshipSubType"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasRightsStatus">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/rightsStatus">
     <rdfs:label xml:lang="en">has rights status</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Object"/>
@@ -454,7 +447,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasSignature">
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/signature">
     <rdfs:label xml:lang="en">has signature</rdfs:label>
     <rdfs:domain>
       <owl:Class>
@@ -485,7 +478,7 @@
   <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/inhibits">
     <rdfs:label xml:lang="en">inhibits</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Inhibitor"/>
-    <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/Functionality"/>
+    <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/Action"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty>
 
@@ -528,21 +521,21 @@
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasCitation">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/citation">
     <rdfs:label xml:lang="en">has citation</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsBasis"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasCompositionLevel">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/compositionLevel">
     <rdfs:label xml:lang="en">has composition level</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/File"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasDeterminationDate">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/determinationDate">
     <rdfs:label xml:lang="en">has determination date</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsStatus"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -550,7 +543,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasKey">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/key">
     <rdfs:label xml:lang="en">has key</rdfs:label>
     <rdfs:domain>
       <owl:Class>
@@ -564,14 +557,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasNote">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/note">
     <rdfs:label xml:lang="en">has note</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasOriginalName">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/originalName">
     <rdfs:label xml:lang="en">has original name</rdfs:label>
     <rdfs:domain>
       <owl:Class>
@@ -586,29 +579,29 @@
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasOutcomeNote">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/outcomeNote">
     <rdfs:label xml:lang="en">has outcome note</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Event"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.loc.gov/premis/rdf/v3/hasNote"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.loc.gov/premis/rdf/v3/note"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasRationale">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/rationale">
     <rdfs:label xml:lang="en">has rationale</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.loc.gov/premis/rdf/v3/hasNote"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.loc.gov/premis/rdf/v3/note"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasRestriction">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/restriction">
     <rdfs:label xml:lang="en">has restriction</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Rule"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasSize">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/size">
     <rdfs:label xml:lang="en">has size</rdfs:label>
     <rdfs:domain>
       <owl:Class>
@@ -623,23 +616,23 @@
     <skos:narrowMatch rdf:resource="http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#fileSize"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasTerms">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/terms">
     <rdfs:label xml:lang="en">has terms</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsBasis"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.loc.gov/premis/rdf/v3/hasNote"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.loc.gov/premis/rdf/v3/note"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasValidationRules">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/validationRules">
     <rdfs:label xml:lang="en">has validation rules</rdfs:label>
     <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Signature"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.loc.gov/premis/rdf/v3/hasNote"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.loc.gov/premis/rdf/v3/note"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/hasVersion">
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/version">
     <rdfs:label xml:lang="en">has version</rdfs:label>
     <rdfs:domain>
       <owl:Class>
