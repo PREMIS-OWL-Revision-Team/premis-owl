@@ -19,11 +19,11 @@
 
 <http://nri.library.ca/5143-026.nrw> a premis:File ;
     dct:format <NikonRaw> ;
-    premis:hasFixity <5143-026Fixity> ;
-    premis:hasSize 5857465 ;
-    premis:hasCompositionLevel 0 ;
+    premis:fixity <5143-026Fixity> ;
+    premis:size 5857465 ;
+    premis:compositionLevel 0 ;
     presLevRole:int <policy1> ;
-    premis:hasRightsStatus <rightsStatus1> ;
+    premis:rightsStatus <rightsStatus1> ;
     dct:rights <rightsBasis1> ;
     prov:wasUsedBy <5143-026Event1> ;
     relSubType:iso <http://nri.library.ca/5143-026-1.dng> .
@@ -37,36 +37,36 @@
     dce:creator "hashlib.sha256" .
 
 <policy1> a presLevType:lop ;
-    premis:hasNote "Format migration" ;
-    premis:hasDocumentation <http://nri.library.ca/prespolicy001.html> .
+    premis:note "Format migration" ;
+    premis:documentation <http://nri.library.ca/prespolicy001.html> .
 
 <rightsStatus1> a copStatus:cpr ;
     premis:startDate "2011-06-19" ;
     premis:endDate "OPEN" ;
-    premis:hasBasis <rightsBasis1> .
+    premis:basis <rightsBasis1> .
 
 <rightsBasis1> a premis:Copyright ;
-    premis:hasJurisidiction: <http://ontologi.es/place/CA> ;
-    premis:hasNote: "Copyright held by the donor" ;
+    premis:jurisidiction <http://ontologi.es/place/CA> ;
+    premis:note "Copyright held by the donor" ;
     premis:allows <rule1> ;
     premis:prohibits <rule2> .
 
 <rule1> a premis:Rule ;
     premis:act acGranted:rep ;
     premis:act acGranted:mig ;
-    premis:hasBasis <rightsBasis1> .
+    premis:basis <rightsBasis1> .
 
 <rule2> a premis:Rule ;
     premis:act acGranted:mod ;
     premis:act acGranted:del ;
-    premis:hasBasis <rightsBasis1> .
+    premis:basis <rightsBasis1> .
 
 <5143-026Event1> a evType:mig ;
     prov:endedAtTime "2017-11-14T13:26:11Z" ;
-    premis:hasOutcome evOutcome:suc ;
+    premis:outcome evOutcome:suc ;
     evRelObjRole:sou <http://nri.library.ca/5143-026.nrw> ;
     evRelObjRole:out <http://nri.library.ca/5143-026-1.dng> ;
-    premis:hasNote "FPRCommandID='a34ddc9b-c922-4bb6-8037-bbe713332175'; program='convert'; version='Version: ImageMagick 6.7.7-10 2017-07-31 Q16 http://www.imagemagick.org'" ;
+    premis:note "FPRCommandID='a34ddc9b-c922-4bb6-8037-bbe713332175'; program='convert'; version='Version: ImageMagick 6.7.7-10 2017-07-31 Q16 http://www.imagemagick.org'" ;
     evRelAgRole:aut <NRI> ;
     evRelAgRole:imp <JaneDoe> ;
     evRelAgRole:exe <ImageMagick> .
@@ -76,25 +76,25 @@
 
 <JaneDoe> a premis:Person ;
     foaf:name "Doe, Jane" ;
-    premis:hasNote "Preservation specialist, Digital Initiatives Division" .
+    premis:note "Preservation specialist, Digital Initiatives Division" .
 
 <ImageMagick> a premis:SoftwareAgent ;
     rdfs:label "ImageMagick" ;
-    premis:hasVersion "6.7.7-10" .
+    premis:version "6.7.7-10" .
 
 <http://nri.library.ca/5143-026-1.dng> a premis:File ;
     dct:format <DNG> ;
-    premis:hasFixity <5143-026-1Fixity> ;
-    premis:hasSize 40257462 ;
-    premis:hasCompositionLevel 0 ;
+    premis:fixity <5143-026-1Fixity> ;
+    premis:size 40257462 ;
+    premis:compositionLevel 0 ;
     presLevRole:cap <policy1> ;
-    premis:hasRightsStatus <rightsStatus1> ;
+    premis:rightsStatus <rightsStatus1> ;
     dct:rights <rightsBasis1> ;
     relSubType:hss <http://nri.library.ca/5143-026.nrw> .
 
 <DNG> a dct:FileFormat ;
     rdfs:label "Digital Negative Format" ;
-    premis:hasVersion "1.4" ;
+    premis:version "1.4" ;
     skos:exactMatch <http://www.nationalarchives.gov.uk/pronom/fmt/730> .
     
 <5143-026-1Fixity> a crypHashFunc:sha256 ;
