@@ -6,7 +6,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix copStatus: <http://id.loc.gov/vocabulary/preservation/copyrightStatus> .
 @prefix crypHashFunc: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions> .
-@prefix acGranted: <http://id.loc.gov/vocabulary/preservation/actionsGranted> .
 @prefix evOutcome: <http://id.loc.gov/vocabulary/preservation/eventOutcome> .
 @prefix evRelAgRole: <http://id.loc.gov/vocabulary/preservation/eventRelatedAgentRole> .
 @prefix evRelObjRole: <http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole> .
@@ -20,8 +19,8 @@
 <http://nri.library.ca/5143-026.nrw> a premis:File ;
     dct:format <NikonRaw> ;
     premis:fixity <5143-026Fixity> ;
-    premis:size 5857465 ;
-    premis:compositionLevel 0 ;
+    premis:size "5857465" ;
+    premis:compositionLevel "0" ;
     presLevRole:int <policy1> ;
     premis:rightsStatus <rightsStatus1> ;
     dct:rights <rightsBasis1> ;
@@ -52,13 +51,13 @@
     premis:prohibits <rule2> .
 
 <rule1> a premis:Rule ;
-    premis:act acGranted:rep ;
-    premis:act acGranted:mig ;
+    premis:act evType:rep ;
+    premis:act evType:mig ;
     premis:basis <rightsBasis1> .
 
 <rule2> a premis:Rule ;
-    premis:act acGranted:mod ;
-    premis:act acGranted:del ;
+    premis:act evType:mod ;
+    premis:act evType:del ;
     premis:basis <rightsBasis1> .
 
 <5143-026Event1> a evType:mig ;
@@ -85,8 +84,8 @@
 <http://nri.library.ca/5143-026-1.dng> a premis:File ;
     dct:format <DNG> ;
     premis:fixity <5143-026-1Fixity> ;
-    premis:size 40257462 ;
-    premis:compositionLevel 0 ;
+    premis:size "40257462" ;
+    premis:compositionLevel "0" ;
     presLevRole:cap <policy1> ;
     premis:rightsStatus <rightsStatus1> ;
     dct:rights <rightsBasis1> ;
