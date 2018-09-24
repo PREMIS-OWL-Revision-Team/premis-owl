@@ -1,4 +1,3 @@
-@prefix func: <http://id.loc.gov/vocabulary/preservation/actionsGranted> .
 @prefix crypHashFunc: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions> . @prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ebucore: <https://www.ebu.ch/metadata/ontologies/ebucore#> .
@@ -8,7 +7,6 @@
 @prefix evRelObjRole:  <http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole> .
 @prefix evType: <http://id.loc.gov/vocabulary/preservation/environmentFunctionType> .
 @prefix envchar:  <http://id.loc.gov/vocabulary/preservation/environmentCharacteristic> .
-@prefix envpurpose: <http://id.loc.gov/vocabulary/preservation/environmentPurpose> .
 @prefix odrl: <http://www.w3.org/ns/odrl/2>.
 @prefix premis: <http://id.loc.gov/vocabulary/preservation/> .
 @prefix presLevRole:  <http://id.loc.gov/vocabulary/preservation/preservationLevelRole> .
@@ -31,13 +29,13 @@
 
 <macos75> a envFuncType:ops ;
   rdfs:label "Mac OS 7.5" ;
-  premis:hasVersion "7.5" ;
+  premis:version "7.5" ;
   dct:creator <Apple_Computer> ;
   relSubType:idp <powerbookG3> .
 
 <clarisworks40> a envFuncType:soa ;
   rdfs:label "ClarisWorks 4.0" ;
-  premis:hasVersion "4.0" ;
+  premis:version "4.0" ;
   dct:creator <Apple_Computer> ;
   skos:closeMatch <http://wikidata.org/wiki/Q3679131> ;
   relSubType:idp <macos> .
@@ -49,7 +47,7 @@
 #Representation of the original Rushdie environment (his personal Powerbook G3
 <rushdieOriginal> a premis:Representation ;
   relSubType:rep <powerbookG3env> ;
-  premis:hasNote "Rushdie's original powerbook G3 computer with Mac OS 7.5 and Claris Works 4.0 installed on it was not preserved" ;
+  premis:note "Rushdie's original powerbook G3 computer with Mac OS 7.5 and Claris Works 4.0 installed on it was not preserved" ;
   prov:wasUsedBy <deletionEvent> .
 
 #Deletion Event of the Rushdie Powerbook G3 representation"
@@ -63,27 +61,27 @@
   relSubType:isr <rushdieEmulationexe> .
 
 <rushdieEmulationexe> a premis:File ;
-  premis:hasCompositionLevel 0 ;
+  premis:compositionLevel 0 ;
   dct:format <e01format> ;
-  premis:hasSize 2987000000 ;
+  premis:size 2987000000 ;
   dce:creator <ewfacquire> ;
   prov:generatedAtTime "2017-04-06T17:57:48.265Z" ;
-  premis:hasFixity <rushdieEmulationFixity> ;
+  premis:fixity <rushdieEmulationFixity> ;
   relSubType:rep <rushdieEmulation> .
 
 <sheepsaver23> a envFuncType:soa ;
   rdfs:label "SheepShaver 2.3" ;
-  premis:hasVersion "2.3" ;
-  premis:hasDocumentation <https://github.com/cebix/macemu> ;
+  premis:version "2.3" ;
+  premis:documentation <https://github.com/cebix/macemu> ;
   dce:rights <rightsBasis3> ;
   relSubType:req <macosx> .
 
 <rightsBasis3> a premis:License ;
-  premis:hasDocumentation <http://sheepshaver.cebix.net/COPYING> .
+  premis:documentation <http://sheepshaver.cebix.net/COPYING> .
 
 <macosx> a envFuncType:ops ;
   rdfs:label "Mac OS X" ;
-  premis:hasVersion "10.1" ;
+  premis:version "10.1" ;
   dce:creator <Apple_Computer> ;
   relSubType:idp <macbook2008> .
 
@@ -99,25 +97,25 @@
 
 #DD Disk Image
 <diskImageDD> a premis:file ;
-  premis:hasCompositionLevel 0 ;
+  premis:compositionLevel 0 ;
   dct:format <ddformat> ;
-  premis:hasSize 6100000000 ;
-  premis:hasOriginalName "1000_PowerbookG3-2" ;
+  premis:size 6100000000 ;
+  premis:originalName "1000_PowerbookG3-2" ;
   dce:creator <gnuddrescue119> ;
   prov:generatedAtTime "2017-04-06T17:57:48.265Z" ;
   prov:wasGeneratedBy <event1> ;
   prov:wasUsedBy <event2> ;
-  premis:hasFixity <diskImageE01Fixity> ;
+  premis:fixity <diskImageE01Fixity> ;
   relSubType:iso <diskImageE01> ;
   relSubType:hss <G3HD> ;
-  premis:hasFixity <diskImagefixity> ;
+  premis:fixity <diskImagefixity> ;
   dce:rights <rightsBasis1> ; 
-  premis:hasRightsStatus [
+  premis:rightsStatus [
     a premis:RightsStatus ;
     premis:startDate "2008-01-01" ;
     premis:endDate "OPEN" ;
-    premis:hasDeterminationDate "2017-04-06" ;
-    premis:hasBasis <rightsBasis1> ] .
+    premis:determinationDate "2017-04-06" ;
+    premis:basis <rightsBasis1> ] .
     
 <diskImageDDFixity> a crypHashFunc:md5 ;
   rdf:value "35d3f6a6146cfbcea710f997cbec8674ce8f3789" ;
@@ -125,32 +123,32 @@
 
 #E01 Disk Image
 <diskImageE01> a premis:Representation ;
-  premis:hasCompositionLevel 0 ;
+  premis:compositionLevel 0 ;
   dct:format <e01format> ;
-  premis:hasSize 6100000000 ;
-  premis:hasOriginalName "1000_PowerbookG3-2" ;
+  premis:size 6100000000 ;
+  premis:originalName "1000_PowerbookG3-2" ;
   dce:creator <ewfacquire> ;
   prov:wasGeneratedBy <event2> ;
   prov:wasUsedBy <event3>, <event4> ;
-  premis:hasFixity <diskImageE01Fixity> ;
+  premis:fixity <diskImageE01Fixity> ;
   relSubType:iso <stickynote> ;
   relSubType:hss <diskImageDD> ;
   relSubType:iem <rushdieEmulation> ;
   dce:rights <rightsBasis1> ;
-  premis:hasRightsStatus [
+  premis:rightsStatus [
     a premis:RightsStatus ;
     premis:startDate "2008-01-01" ;
     premis:endDate "OPEN" ;
-    premis:hasDeterminationDate "2017-04-06" ;
-    premis:hasBasis <rightsBasis1> ] .
+    premis:determinationDate "2017-04-06" ;
+    premis:basis <rightsBasis1> ] .
 
 <rightsBasis1> a premis:InstitutionalPolicy ;
-  premis:hasNote "Original disk images are restricted." ;
+  premis:note "Original disk images are restricted." ;
   prov:wasInfluencedBy <euladmin> , <srushdie> ; 
   premis:prohibits <rule1> .
     
 <rule1> a premis:Rule ;
-  premis:act func:dis ;
+  premis:act evType:dis ;
   premis:startDate "2017-04-06" ;
   premis:endDate "OPEN" .
 
@@ -164,35 +162,35 @@
  
 #Stickynote: a file contained on the Rushdie Hard Drive
 <stickynote> a premis:File ;
-  premis:hasCompositionLevel 0 ;
+  premis:compositionLevel 0 ;
   dct:format <text> ;
-  premis:hasSize 371 ;
-  premis:hasOriginalName "Frontier The First Recording.txt" ;
+  premis:size 371 ;
+  premis:originalName "Frontier The First Recording.txt" ;
   dct:creator <FTKImager> ;
   prov:wasGeneratedBy <eventAA> ;
   prov:wasUsedBy <eventAB>, <eventAC> ;
-  premis:hasFixity <stickynotefixity> ;
+  premis:fixity <stickynotefixity> ;
   relSubType:hss <diskImageE01> ;
   relSubType:iem <rushdieEmulation> ;
-  premis:hasFixity <diskImagefixity> ;
+  premis:fixity <diskImagefixity> ;
   dct:rights <rightsBasis2> ;
-  premis:hasRightsStatus [
+  premis:rightsStatus [
     a premis:RightsStatus ;
     premis:startDate "2008-01-01" ;
     premis:endDate "OPEN" ;
-    premis:hasDeterminationDate "2017-04-06" ;
-    premis:hasBasis <rightsBasis2> ] .
+    premis:determinationDate "2017-04-06" ;
+    premis:basis <rightsBasis2> ] .
 
 <rightsBasis2> a premis:License ;
-  premis:hasDocumentation <deedOfGift> ;
-  premis:hasTerms "Selected electronic files can be viewed but not downloaded." ;
+  premis:documentation <deedOfGift> ;
+  premis:terms "Selected electronic files can be viewed but not downloaded." ;
   prov:wasInfluencedBy <srushdie> ;
   premis:allows <rule2> .
 
 <rule2> a premis:Rule ;
-  premis:act func:ren ;
-  premis:act func:mig ;
-  premis:act func:rep ;
+  premis:act evType:ren ;
+  premis:act evType:mig ;
+  premis:act evType:rep ;
   premis:startDate "2017-06-06" ;
   premis:endDate "OPEN" .
     
@@ -207,7 +205,7 @@
 #Event data
 <event1> a evType:cre ;
   prov:endedAtTime "2017-07-22T11:48:07.487Z" ;
-  premis:hasOutcome evOutcome:suc ;
+  premis:outcome evOutcome:suc ;
   evRelAgRole:imp <vendor> ;
   evRelAgRole:exe <GNUddrescue> ;
   evRelObjRole:sou <G3HD> ;
@@ -215,12 +213,12 @@
 
 <GNUddrescue> a prov:softwareAgent ;
   rdfs:label "GNU ddrescue" ;
-  premis:hasVersion "1.19" ;
-  premis:hasDocumentation <https://www.gnu.org/software/ddrescue/> .
+  premis:version "1.19" ;
+  premis:documentation <https://www.gnu.org/software/ddrescue/> .
 
 <event2> a evType:mig ;
   prov:endedAtTime "2017-08-22T16:48:07.487Z" ;
-  premis:hasOutcome evOutcome:suc ;
+  premis:outcome evOutcome:suc ;
   evRelAgRole:imp <dwaugh> ;
   evRelAgRole:exe <ewfacquire> ;
   evRelObjRole:sou <diskImageDD> ;
@@ -232,9 +230,9 @@
 <event3> a evType:ing ;
   prov:startedAtTime "2017-08-24T08:48:07.487Z" ;
   prov:endedAtTime "2017-08-24T08:50:56.487Z" ;
-  premis:hasOutcome evOutcome:suc ;
-  premis:hasOutcomeNote "successfully ingested" ;
-  premis:hasOutcomeNote "assigned pid 24ipj" ;
+  premis:outcome evOutcome:suc ;
+  premis:outcomeNote "successfully ingested" ;
+  premis:outcomeNote "assigned pid 24ipj" ;
   evRelAgRole:imp <dwaugh> ;
   evRelAgRole:exe <Fedora> ;
   evRelObjRole:sou <diskImageE01> .
@@ -242,22 +240,22 @@
 <event4> a evType:mes ;
   prov:startedAtTime "2017-08-24T08:48:07.487Z" ;
   prov:endedAtTime "2017-08-24T08:50:56.487Z" ;
-  premis:hasOutcome evOutcome:suc ;
-  premis:hasOutcomeDetail "md5:258622b1688250cb619f3c9ccaefb7eb" ;
+  premis:outcome evOutcome:suc ;
+  premis:outcomeDetail "md5:258622b1688250cb619f3c9ccaefb7eb" ;
   evRelAgRole:exe <md5Hash> ;
   evRelObjRole:sou <diskImageE01> .
 
 <event5> a evType:fix ;
   prov:startedAtTime "2017-08-23T00:07:20.656946" ;
   prov:endedAtTime "2017-08-23T08:50:56.487Z" ;
-  premis:hasOutcome evOutcome:suc ;
-  premis:hasOutcomeNote "program=eulfedora validate-checksums; version=1.7.2" ;
-  premis:hasOutcomeDetail "Datastreams checked: SourceTech (1), MODS (2), Rights (1), DigitalTech (2), DC (2), CompressedAudio (1), AUDIO (1), provenanceMetadata (1), RELS-EXT (1)" ;
+  premis:outcome evOutcome:suc ;
+  premis:outcomeNote "program=eulfedora validate-checksums; version=1.7.2" ;
+  premis:outcomeDetail "Datastreams checked: SourceTech (1), MODS (2), Rights (1), DigitalTech (2), DC (2), CompressedAudio (1), AUDIO (1), provenanceMetadata (1), RELS-EXT (1)" ;
   evRelAgRole:imp <fedoraAdmin> .
 
 <eventAA> a evType:cre ;
   dct:date "2017-08-22T16:48:07.487Z" ;
-  premis:hasOutcome evOutcome:suc ;
+  premis:outcome evOutcome:suc ;
   evRelAgRole:exe <FTKImager> ;
   evRelObjRole:sou <diskImageE01> ;
   evRelObjRole:out <stickynote> .
@@ -265,8 +263,8 @@
 <eventAB> a evType:ing ;
   prov:startedAtTime "2017-08-24T08:48:07.487Z" ;
   prov:endedAtTime "2017-08-24T08:50:56.487Z" ;
-  premis:hasOutcome evOutcome:suc ;
-  premis:hasOutcomeDetail "successfully ingested; assigned pid 97loi" ;
+  premis:outcome evOutcome:suc ;
+  premis:outcomeDetail "successfully ingested; assigned pid 97loi" ;
   evRelAgRole:imp <dwaugh> ;
   evRelAgRole:exe <Fedora> ;
   evRelObjRole:out <stickynote> .
@@ -274,7 +272,7 @@
 <eventAC> a evType:mes ;
   prov:startedAtTime "2017-08-24T08:48:07.487Z" ;
   prov:endedAtTime "2017-08-24T08:50:56.487Z" ;
-  premis:hasOutcome evOutcome:suc ;
+  premis:outcome evOutcome:suc ;
   evRelAgRole:imp <md5Hash> ;
   prov:generated <stickynotefixity> ;
   evRelObjRole:sou <stickynote> .
