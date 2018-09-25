@@ -6,7 +6,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix copStatus: <http://id.loc.gov/vocabulary/preservation/copyrightStatus> .
 @prefix crypHashFunc: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions> .
-@prefix acGranted: <http://id.loc.gov/vocabulary/preservation/actionsGranted> .
 @prefix evOutcome: <http://id.loc.gov/vocabulary/preservation/eventOutcome> .
 @prefix evRelAgRole: <http://id.loc.gov/vocabulary/preservation/eventRelatedAgentRole> .
 @prefix evRelObjRole: <http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole> .
