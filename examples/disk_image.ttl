@@ -1,4 +1,5 @@
-@prefix crypHashFunc: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions> . @prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix crypHashFunc: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ebucore: <https://www.ebu.ch/metadata/ontologies/ebucore#> .
 @prefix envFuncType: <http://id.loc.gov/vocabulary/preservation/environmentFunctionType> .
@@ -16,6 +17,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix relSubType:  <http://id.loc.gov/vocabulary/preservation/relationshipSubType> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+#Note: This example was created for modeling purposes only and is not a reflection of actual data or an existing implementation.
+#Use case:  Emory University acquired several hard drives as a part of the Rushdie papers.  Imaging of the drives was outsourced to a vendor who used GNU ddrescue 1.19.  Following receipt at Emory, a digital archivist reviewed the image, verified the MD5 checksum, and created a SHA1 checksum. Ewfacquire was used to migrate the disk image from .dd to .E01 in preparation for ingest into Emory’s digital repository. Individual files (including a Mac sticky note) were extracted from the image using FTK Imager and ingested as separate files.  All ingested files undergo validation, a virus check, and checksum generation as a part of the ingest process.  Users may view files in a emulated environment, which uses SheepShaver 2.3 on a Mac Powerbook.  This emulated environment has been imaged as well and ingested into the repository for preservation purposes.
+#The disk images are restricted to the public but the sticky note (an example of an extracted file) is available for reading room use only per the deed of gift.
 
 #Rushdie papers
 <RushdiePapers> a premis:IntellectualEntity ;
