@@ -18,6 +18,9 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix storMedium: <http://id.loc.gov/preservation/storageMedium> .
 
+#Example: digitized video
+#Note: This example was created for modeling purposes only and is not a reflection of actual data or an existing implementation.
+#Use case:  Emory University holds the Alice Walker papers, which includes a umatic videotape of Gloria Steinem interviewing Alice Walker in 1984.  For preservation reasons, it has been digitized into a .mov file and an .mp4 access copy has been generated.  Both files have been ingested into the repository.  An access copy of the video is available in the reading room only.
 
 <WalkerPapers> a premis:IntellectualEntity ;
     relSubtype:hsp <SteinemInterview> .
