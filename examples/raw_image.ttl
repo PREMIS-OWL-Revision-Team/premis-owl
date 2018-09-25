@@ -17,6 +17,8 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
+#A repository ingests a raw camera image and creates a digital negative for long-term preservation purposes.
+
 <http://nri.library.ca/5143-026.nrw> a premis:File ;
     dct:format <NikonRaw> ;
     premis:hasFixity <5143-026Fixity> ;
