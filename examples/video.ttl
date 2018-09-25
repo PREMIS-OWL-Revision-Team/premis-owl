@@ -7,7 +7,6 @@
 @prefix evRelObjRole:  <http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole> .
 @prefix evtype: <http://id.loc.gov/vocabulary/preservation/environmentFunctionType> .
 @prefix envchar:  <http://id.loc.gov/vocabulary/preservation/environmentCharacteristic> .
-@prefix envpurpose: <http://id.loc.gov/vocabulary/preservation/environmentPurpose> .
 @prefix premis: <http://id.loc.gov/vocabulary/preservation/> .
 @prefix presLevRole:  <http://id.loc.gov/vocabulary/preservation/preservationLevelRole> .
 @prefix presLevType:  <http://id.loc.gov/vocabulary/preservation/preservationLevelType> .
