@@ -1,21 +1,23 @@
-@prefix crypHashFunc: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions> . @prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix crypHashFunc: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ebucore: <https://www.ebu.ch/metadata/ontologies/ebucore#> .
-@prefix envFuncType: <http://id.loc.gov/vocabulary/preservation/environmentFunctionType> .
-@prefix evOutcome: <http://id.loc.gov/vocabulary/preservation/eventOutcome> .
-@prefix evRelAgRole:  <http://id.loc.gov/vocabulary/preservation/eventRelatedAgentRole> .
-@prefix evRelObjRole:  <http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole> .
-@prefix evtype: <http://id.loc.gov/vocabulary/preservation/environmentFunctionType> .
-@prefix envchar:  <http://id.loc.gov/vocabulary/preservation/environmentCharacteristic> .
-@prefix premis: <http://id.loc.gov/vocabulary/preservation/> .
-@prefix presLevRole:  <http://id.loc.gov/vocabulary/preservation/preservationLevelRole> .
-@prefix presLevType:  <http://id.loc.gov/vocabulary/preservation/preservationLevelType> .
+@prefix envFuncType: <http://id.loc.gov/vocabulary/preservation/environmentFunctionType/> .
+@prefix evOutcome: <http://id.loc.gov/vocabulary/preservation/eventOutcome/> .
+@prefix evRelAgRole:  <http://id.loc.gov/vocabulary/preservation/eventRelatedAgentRole/> .
+@prefix evRelObjRole:  <http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole/> .
+@prefix evtype: <http://id.loc.gov/vocabulary/preservation/environmentFunctionType/> .
+@prefix envchar:  <http://id.loc.gov/vocabulary/preservation/environmentCharacteristic/> .
+@prefix envpurpose: <http://id.loc.gov/vocabulary/preservation/environmentPurpose/> .
+@prefix premis: <http://www.loc.gov/standards/premis/rdf/v3/> .
+@prefix presLevRole:  <http://id.loc.gov/vocabulary/preservation/preservationLevelRole/> .
+@prefix presLevType:  <http://id.loc.gov/vocabulary/preservation/preservationLevelType/> .
 @prefix prov: <http://w3.org/ns/prov#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix relSubtype:  <http://id.loc.gov/vocabulary/preservation/relationshipSubType> .
+@prefix relSubtype:  <http://id.loc.gov/vocabulary/preservation/relationshipSubType/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix storMedium: <http://id.loc.gov/preservation/storageMedium> .
+@prefix storMedium: <http://id.loc.gov/preservation/storageMedium/> .
 
 #Example: digitized video
 #Note: This example was created for modeling purposes only and is not a reflection of actual data or an existing implementation.
