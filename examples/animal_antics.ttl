@@ -31,8 +31,8 @@
     relSubType:inc <http://nri.library.ca/0912-0003.tif> .
 
 <policy1> a presLevType:lop ;
-    premis:hasNote "Full preservation" ;
-    premis:hasDocumentation <http://nri.library.ca/prespolicy001.html> .
+    premis:note "Full preservation" ;
+    premis:documentation <http://nri.library.ca/prespolicy001.html> .
 
 <http://nri.library.ca/0192-2> a premis:Representation ;
     presLevRole:cap <policy1> ;
@@ -40,14 +40,14 @@
 
 <http://nri.library.ca/0912-0001.xml> a premis:File ;
     dct:format <XMLFormat> ;
-    premis:hasFixity <0912-0001Fixity> ;
-    premis:hasSize 58465 ;
-    premis:hasCompositionLevel 0 ;
+    premis:fixity <0912-0001Fixity> ;
+    premis:size 58465 ;
+    premis:compositionLevel 0 ;
     prov:wasUsedBy <0912-0001Event> .
 
 <XMLFormat> a dct:FileFormat ;
     rdfs:label "Extensible Markup Language" ;
-    premis:hasVersion "1.0" ;
+    premis:version "1.0" ;
     skos:exactMatch <http://www.nationalarchives.gov.uk/pronom/fmt/101> .
 
 <0912-0001Fixity> a crypHashFunc:sha256 ;
@@ -62,23 +62,23 @@
 
 <JaneDoe> a prov:Person ;
     foaf:name "Doe, Jane" ;
-    premis:hasNote "Preservation specialist, Digital Initiatives Division" .
+    premis:note "Preservation specialist, Digital Initiatives Division" .
 
 <NRI> a prov:Organization ;
     foaf:name "Not a Real Institution" .
 
 <http://nri.library.ca/0912-0002.tif> a premis:File ;
     dct:format <TIFFFormat> ;
-    premis:hasFixity <0912-0002Fixity> ;
-    premis:hasSize 5748572 ;
-    premis:hasCompositionLevel 0 ;
+    premis:fixity <0912-0002Fixity> ;
+    premis:size 5748572 ;
+    premis:compositionLevel 0 ;
     prov:generatedAtTime "2017-11-10T14:23:30Z" ;
     dct:creator <KodakCapturePro> ;
     prov:wasUsedBy <0912-0002Event> .
 
 <TIFFFormat> a dct:FileFormat ;
     rdfs:label "Tagged Image File Format" ;
-    premis:hasVersion "6.0" ;
+    premis:version "6.0" ;
     skos:exactMatch <http://www.nationalarchives.gov.uk/pronom/fmt/353> .
 
 <0912-0002Fixity> a crypHashFunc:sha256 ;
@@ -87,4 +87,4 @@
 
 <KodakCapturePro> a prov:softwareAgent ;
     rdfs:label "Kodak Capture Pro" ;
-    premis:hasVersion "4.0" .
+    premis:version "4.0" .
