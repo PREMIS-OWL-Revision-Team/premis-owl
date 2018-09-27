@@ -6,13 +6,13 @@
 @prefix rdf: <http://www.w3.org/TR/rdf-schema/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix crypHashFunc: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions> .
-@prefix evOutcome: <http://id.loc.gov/vocabulary/preservationevOutcome> .
-@prefix evRelAgRole: <http://id.loc.gov/vocabulary/preservation/eventRelatedAgentRole> .
-@prefix evType: <http://id.loc.gov/vocabulary/preservation/eventType> .
-@prefix presLevType:  <http://id.loc.gov/vocabulary/preservation/preservationLevelType> .
-@prefix presLevRole:  <http://id.loc.gov/vocabulary/preservation/preservationLevelRole> .
-@prefix relSubType:  <http://id.loc.gov/vocabulary/preservation/relationshipSubType> .
+@prefix crypHashFunc: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions/> .
+@prefix evOutcome: <http://id.loc.gov/vocabulary/preservationevOutcome/> .
+@prefix evRelAgRole: <http://id.loc.gov/vocabulary/preservation/eventRelatedAgentRole/> .
+@prefix evType: <http://id.loc.gov/vocabulary/preservation/eventType/> .
+@prefix presLevType:  <http://id.loc.gov/vocabulary/preservation/preservationLevelType/> .
+@prefix presLevRole:  <http://id.loc.gov/vocabulary/preservation/preservationLevelRole/> .
+@prefix relSubType:  <http://id.loc.gov/vocabulary/preservation/relationshipSubType/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 #Example: Animal Antics (digitized book)
 #The book Animal Antics was published in 1902. A library digitized Animal Antics, creating one TIFF file for each of 189 pages. As structural metadata, it created an XML file showing how the images are assembled into a complete book. The library then performed OCR on the TIFF images, ultimately creating a single large text file that was marked up by hand in SGML. The library submitted 189 TIFF files, one XML file, and one SGML file to a preservation repository.
