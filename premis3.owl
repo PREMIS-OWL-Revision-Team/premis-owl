@@ -15,9 +15,9 @@
     <rdfs:comment xml:lang="en">Ontology for PREMIS 3, the international standard
       for metadata to support the preservation of digital objects and ensure their
       long-term usability.</rdfs:comment> 
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-04</dcterms:modified>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017/04/04</owl:versionInfo>
-    <owl:versionIRI rdf:resource="http://www.loc.gov/premis/rdf/v3/2017/04/04/"/>   
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-12</dcterms:modified>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018/10/12</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://www.loc.gov/premis/rdf/v3/2018/10/12/"/>   
     <rdfs:seeAlso rdf:resource="http://www.loc.gov/standards/premis/"/>   
     <rdfs:seeAlso rdf:resource="https://github.com/PREMIS-OWL-Revision-Team/revise-premis-owl/"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
@@ -327,7 +327,7 @@
 
   <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/governs">
     <rdfs:label xml:lang="en">governs</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsStatus"/>
+    <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/RightsBasis"/>
     <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/Object"/>
     <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
   </owl:ObjectProperty> 
