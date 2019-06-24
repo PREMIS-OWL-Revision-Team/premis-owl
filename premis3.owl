@@ -142,7 +142,7 @@
 
   <owl:Class rdf:about="http://www.loc.gov/premis/rdf/v3/IntellectualEntity">
     <rdfs:label xml:lang="en">Intellectual entity</rdfs:label>
-    <rdfs:comment xml:lang="en"> set of content that is considered a single intellectual unit for purposes of management and
+    <rdfs:comment xml:lang="en">A set of content that is considered a single intellectual unit for purposes of management and
       description: for example, a particular book, map, photograph, database, or piece of hardware or
       software. An Intellectual Entity can include other Intellectual Entities; for example, a web site can
       include a web page; a web page can include an image. An Intellectual Entity may have one or more digital
