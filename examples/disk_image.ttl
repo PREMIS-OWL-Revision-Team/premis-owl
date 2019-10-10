@@ -101,7 +101,7 @@
   prov:wasUsedBy <event1> .
 
 #DD Disk Image
-<diskImageDD> a premis:file ;
+<diskImageDD> a premis:File ;
   premis:compositionLevel 0 ;
   dct:format <ddformat> ;
   premis:size 6100000000 ;
@@ -127,7 +127,7 @@
   dce:creator <gnuddrescue119> .
 
 #E01 Disk Image
-<diskImageE01> a premis:Representation ;
+<diskImageE01> a premis:File ;
   premis:compositionLevel 0 ;
   dct:format <e01format> ;
   premis:size 6100000000 ;
