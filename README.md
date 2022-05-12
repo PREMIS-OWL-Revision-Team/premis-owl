@@ -1,9 +1,3 @@
 # OWL Ontology for PREMIS version 3
 
-This revision is based on the [PREMIS Data Dictionary, version 3.0](http://www.loc.gov/standards/premis/v3/index.html):
-
-* [OWL ontology](premis3.owl)
-* [examples](examples/)
-
-See the [PREMIS OWL Ontology](http://www.loc.gov/standards/premis/ontology/owl-version3.html) site for
-additional documentation and usage guidelines.
+This repository was used by the PREMIS ontology revision team between 2015 and 2018 to produce the version 3 of the PREMIS ontology, now hosted by the Network Development and MARC Standards Office. Please refer to the [PREMIS repository](https://github.com/lcnetdev/PREMIS/) for up-to-date reference documents.
